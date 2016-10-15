@@ -1,4 +1,4 @@
-github-uri: https://github.com/tkaburagi1214/demo-onlinestore-service.git
+github-uri: https://github.com/tkaburagi1214/demo-onlinestore-order.git
 github-branch: master
 #cf-api: https://api.run.pivotal.io
 #cf-username: #NAME
@@ -11,4 +11,4 @@ cf-password: pass
 cf-org: pcfdev-org
 cf-space: pcfdev-space
 app-domain: local.pcfdev.io
-app-preffix: demo-onlinestore-service
+app-preffix: demo-onlinestore-order
