@@ -1,0 +1,12 @@
+---
+platform: linux
+image_resource:
+  type: docker-image
+  source:
+    repository: appropriate/curl
+
+inputs:
+  - name: demo-onlinestore-order
+
+run:
+  path: demo-onlinestore-order/ci/tasks/smoke.sh

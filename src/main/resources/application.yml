@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: onlinestore-order
+      
+  zipkin:
+    base-url: http://zipkin-server-tkaburagi.cfapps.io/
+    enabled: true
+    
+security:
+  basic:
+    enabled: false
+
+management:
+  security:
+    enabled: false
+    
+spring.jpa:
+  hibernate.ddl-auto: create
