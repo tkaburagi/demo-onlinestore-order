@@ -1,6 +1,16 @@
 spring:
   application:
     name: onlinestore-order
+
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://us-cdbr-iron-east-02.cleardb.net/ad_3eec50538de38f6?user=b1f4fc0db32c3f&password=5aaf4ec5
+    username: b1f4fc0db32c3f
+    password: 5aaf4ec5
+
+  jpa:
+   database: MYSQL
+   show-sql: true
       
   zipkin:
     base-url: http://zipkin-server-tkaburagi.cfapps.io/
