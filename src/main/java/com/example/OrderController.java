@@ -18,6 +18,12 @@ public class OrderController {
 	
 	@Autowired
 	OrderRepository repo;
+
+	@HystrixCommand
+	@RequestMapping("/v")
+	public String showVersion() {
+		return "v1";
+	}
 	
 	@HystrixCommand
 	@RequestMapping("/showorder")
