@@ -22,7 +22,7 @@ public class OrderController {
 	@HystrixCommand
 	@RequestMapping("/v")
 	public String showVersion() {
-		return "v0.1";
+		return "v2";
 	}
 	
 	@HystrixCommand
