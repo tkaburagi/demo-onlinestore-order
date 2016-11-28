@@ -26,3 +26,13 @@ management:
     
 spring.jpa:
   hibernate.ddl-auto: create
+
+eureka:
+  client:
+    registry-fetch-interval-seconds: 6
+    instance-info-replication-interval-seconds: 6
+    register-with-eureka: true
+    fetch-registry: true
+    heartbeat-executor-thread-pool-size: 5
+    eureka-service-url-poll-interval-seconds: 10
+    leaseRenewalIntervalInSeconds: 10
