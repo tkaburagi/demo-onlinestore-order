@@ -38,5 +38,3 @@ set -e
 echo "Routes updated"
 
 cf routes
-
-cf restart $NEXT_APP_NAME 
