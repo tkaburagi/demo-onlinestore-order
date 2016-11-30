@@ -12,4 +12,4 @@ applications:
   env:
    SPRING_PROFILES_ACTIVE: cloud 
    CF_TARGET: https://api.run.haas-70.pez.pivotal.io
-   VERSION: 1
+   VERSION: 2
