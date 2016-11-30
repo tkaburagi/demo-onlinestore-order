@@ -36,7 +36,7 @@ public class OrderController {
 	@HystrixCommand
 	@RequestMapping("/v")
 	public String showVersion() {
-		return "v2";
+		return System.getenv("VERSION");
 	}
 	
 	@HystrixCommand
