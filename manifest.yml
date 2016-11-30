@@ -2,7 +2,7 @@
 applications:
 - name: APPLICATION_NAME
   host: demo-onlinestore-order-temp
-  memory: 800M
+  memory: 1G
   instances: 1
   services:
    - service-registry
