@@ -40,6 +40,13 @@ public class OrderController {
 	}
 	
 	@HystrixCommand
+	@RequestMapping("/kill")
+	public String kill() {
+		System.exit(-1);
+		return "killed!";
+	}
+	
+	@HystrixCommand
 	@RequestMapping("/showorder")
 	public List<Orderhistory> showOrder(@RequestParam("username") String username) {
 		return repo.findByNamedQuery(username);
@@ -70,5 +77,17 @@ public class OrderController {
 		String resultFromService = template.getForObject(targetUrl, String.class);
 		
 		return  "Order App = " + vcap_app.get("instance_index").asText() + " (version = " + version+ ")" + "," + resultFromService;
+	}
+	
+	@RequestMapping("/getlocalinfo")
+	public String[] getLocalInfo() throws JsonProcessingException, IOException {
+		String vcap = System.getenv("VCAP_APPLICATION");
+		ObjectMapper mapper = new ObjectMapper();
+		JsonNode vcap_app = mapper.readTree(vcap);
+		String[] list = new String[3];
+		list[0] = System.getenv("CF_INSTANCE_ADDR");
+		list[1] = System.getenv("VERSION");
+		list[2] = vcap_app.get("instance_index").asText();
+		return list;
 	}
 }
